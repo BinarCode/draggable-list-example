@@ -1,6 +1,10 @@
 <template>
     <div id="app" class="min-h-screen w-screen bg-gray-200 flex items-center justify-center">
-        <draggable tag="ul" class="w-full max-w-md" :list="users">
+        <draggable tag="ul"
+                   class="w-full max-w-md"
+                   ghost-class="moving-card"
+                   :list="users"
+                   :animation="200">
             <li v-for="user in users"
                 :key="user.id"
                 class="p-4 mb-3 flex justify-between items-center bg-white shadow rounded-lg cursor-move">
@@ -79,4 +83,7 @@
 </script>
 
 <style lang="scss">
+    .moving-card {
+        @apply opacity-50 bg-gray-100 border border-blue-500;
+    }
 </style>
