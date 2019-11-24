@@ -1,4 +1,5 @@
-# draggable-list
+# Vue.js and Tailwind draggable list
+
 
 ## Project setup
 ```
