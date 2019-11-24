@@ -19,7 +19,12 @@
     </li>
 </template>
 <script>
+  import { EditIcon, Trash2Icon } from "vue-feather-icons";
   export default {
+    components: {
+      EditIcon,
+      Trash2Icon
+    },
     props: {
       user: {
         type: Object,
