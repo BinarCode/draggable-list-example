@@ -1,10 +1,12 @@
 <template>
     <div id="app" class="min-h-screen w-screen bg-gray-200 flex items-center justify-center">
-        <ul>
-            <li v-for="user in users" :key="user.id">
-              {{user.name}}
-            </li>
-        </ul>
+      <ul class="w-full max-w-md">
+        <li v-for="user in users"
+            :key="user.id"
+            class="p-4 mb-3 flex justify-between items-center bg-white shadow rounded-lg cursor-move">
+          {{user.name}}
+        </li>
+      </ul>
     </div>
 </template>
 
