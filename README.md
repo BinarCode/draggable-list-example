@@ -1,5 +1,5 @@
 # Vue.js and Tailwind draggable list
-
+![Demo](https://raw.githubusercontent.com/BinarCode/draggable-list-example/master/public/demo.gif)
 
 ## Project setup
 ```
