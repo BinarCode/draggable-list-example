@@ -16,16 +16,13 @@
 </template>
 
 <script>
-  import { EditIcon, Trash2Icon } from "vue-feather-icons";
   import Draggable from 'vuedraggable'
   import UserCard from "./components/UserCard";
   export default {
     name: "App",
     components: {
       Draggable,
-      EditIcon,
       UserCard,
-      Trash2Icon
     },
     data() {
       return {
