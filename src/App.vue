@@ -8,14 +8,32 @@
                     <img class="w-10 h-10 rounded-full" :src="user.avatar" :alt="user.name">
                     <p class="ml-2 text-gray-700 font-semibold font-sans tracking-wide">{{user.name}}</p>
                 </div>
+                <div class="flex">
+                    <button aria-label="Edit user"
+                            class="p-1 focus:outline-none focus:shadow-outline text-teal-500 hover:text-teal-600"
+                            @click="onEdit(user)">
+                        <EditIcon/>
+                    </button>
+                    <button aria-label="Delete user"
+                            class="p-1 focus:outline-none focus:shadow-outline text-red-500 hover:text-red-600"
+                            @click="onDelete(user)">
+                        <Trash2Icon/>
+                    </button>
+                </div>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
+  import { EditIcon, Trash2Icon } from "vue-feather-icons";
+
   export default {
-    name: 'app',
+    name: "App",
+    components: {
+      EditIcon,
+      Trash2Icon
+    },
     data() {
       return {
         users: [
@@ -45,6 +63,14 @@
             avatar: "https://pickaface.net/gallery/avatar/elmedinilla541c03412955c.png"
           }
         ]
+      }
+    },
+    methods: {
+      onEdit(user) {
+        alert(`Editing ${user.name}`);
+      },
+      onDelete(user) {
+        alert(`Deleting ${user.name}`);
       }
     }
   }
