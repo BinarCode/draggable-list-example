@@ -26,10 +26,5 @@
         default: () => ({})
       }
     },
-    methods: {
-
-    }
   }
 </script>
-<style>
-</style>
